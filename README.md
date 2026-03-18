@@ -43,25 +43,3 @@ Frontend runs at `http://localhost:5173`
 ```
 
 ---
-
-### Step 4 — Create a `.gitignore`
-
-Create `GreenSense/.gitignore`:
-```
-# Java
-greensense_java/target/
-*.class
-*.jar
-
-# Node
-greensense_clean/node_modules/
-greensense_clean/dist/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.idea/
-*.iml
-.vscode/
