@@ -1,0 +1,14 @@
+com\greensense\engine\FilterEngine.class
+com\greensense\model\UserInput.class
+com\greensense\engine\EngineStage.class
+com\greensense\engine\ExplanationEngine.class
+com\greensense\data\PlantKnowledgeBase.class
+com\greensense\model\CareGuide.class
+com\greensense\engine\ScoringEngine.class
+com\greensense\api\RecommendationController.class
+com\greensense\model\RecommendationResult.class
+com\greensense\model\Plant.class
+com\greensense\engine\ScoredPlant.class
+com\greensense\GreenSenseApplication.class
+com\greensense\engine\ScoringWeights.class
+com\greensense\engine\DecisionEngine.class
