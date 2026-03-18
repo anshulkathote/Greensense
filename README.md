@@ -40,6 +40,3 @@ Frontend runs at `http://localhost:5173`
 
 ## Pipeline
 `User Input → FilterEngine → ScoringEngine → ExplanationEngine → Results`
-```
-
----
