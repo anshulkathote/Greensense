@@ -27,7 +27,7 @@ export function SelectField({ label, icon, value, onChange, options }) {
                 background: isSelected
                   ? `linear-gradient(135deg, ${theme.colors.primaryDark}, ${theme.colors.primaryDeep})`
                   : theme.colors.bgCard,
-                color: isSelected ? theme.colors.textPrimary : theme.colors.textMuted,
+                color: isSelected ? "#ffffff" : theme.colors.textMuted,
                 cursor: "pointer", fontSize: 13,
                 fontWeight: isSelected ? 700 : 400,
                 fontFamily: theme.fonts.body,

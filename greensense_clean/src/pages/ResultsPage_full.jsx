@@ -7,7 +7,7 @@ import { useParticleCanvas }  from "../utils/useParticleCanvas";
 import { formatRoomLabel }    from "../utils/helpers";
 import { theme }              from "../styles/theme";
 
-export function ResultsPage({ results, form, totalPlants, compatibleCount, onBack }) {
+export function ResultsPage({ results, form, totalPlants, compatibleCount, onBack, onFindNurseries }) {
   const [expanded, setExpanded] = useState(null);
   const canvasRef = useParticleCanvas();
 
@@ -16,7 +16,7 @@ export function ResultsPage({ results, form, totalPlants, compatibleCount, onBac
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #030d06 0%, #081409 40%, #040e07 100%)",
+      background: "linear-gradient(160deg, #f0f7f3 0%, #e8f5ee 40%, #f4faf7 100%)",
       fontFamily: theme.fonts.body, color: theme.colors.textPrimary,
       position: "relative", overflow: "hidden",
     }}>
@@ -24,14 +24,30 @@ export function ResultsPage({ results, form, totalPlants, compatibleCount, onBac
 
       <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 20px 60px", position: "relative", zIndex: 1 }}>
         <div style={{ paddingTop: 40, marginBottom: 28 }}>
-          <button onClick={onBack} style={{
-            background: "transparent", border: `1px solid ${theme.colors.borderLight}`,
-            color: theme.colors.primary, padding: "8px 16px",
-            borderRadius: theme.radius.pill, cursor: "pointer",
-            fontSize: 12, marginBottom: 24, fontFamily: theme.fonts.body,
-          }}>
-            ← Adjust Inputs
-          </button>
+          <div style={{ display: "flex", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
+            <button onClick={onBack} style={{
+              background: "transparent", border: `1px solid ${theme.colors.borderLight}`,
+              color: theme.colors.primary, padding: "8px 16px",
+              borderRadius: theme.radius.pill, cursor: "pointer",
+              fontSize: 12, fontFamily: theme.fonts.body,
+            }}>
+              ← Adjust Inputs
+            </button>
+            {results.length > 0 && (
+              <button onClick={onFindNurseries} style={{
+                background: "linear-gradient(135deg, #2d6a4f, #40916c)",
+                border: "none",
+                color: "#d8f3dc", padding: "8px 20px",
+                borderRadius: theme.radius.pill, cursor: "pointer",
+                fontSize: 12, fontWeight: 700, fontFamily: theme.fonts.body,
+                display: "flex", alignItems: "center", gap: 6,
+                boxShadow: "0 2px 12px rgba(52,183,120,0.25)",
+                transition: "all 0.2s",
+              }}>
+                🏪 Find Nearby Nurseries
+              </button>
+            )}
+          </div>
 
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
             <div>

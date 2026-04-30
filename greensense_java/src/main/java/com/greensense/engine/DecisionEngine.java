@@ -41,7 +41,7 @@ public class DecisionEngine {
     public DecisionEngine() {
         this.knowledgeBase     = new PlantKnowledgeBase();
         this.filterEngine      = new FilterEngine();
-        this.scoringEngine     = new ScoringEngine(ScoringWeights.defaults());
+        this.scoringEngine     = new ScoringEngine(MLWeightsLoader.load()); // ML-trained weights
         this.explanationEngine = new ExplanationEngine();
     }
 

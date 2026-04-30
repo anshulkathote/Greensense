@@ -20,7 +20,7 @@ export function LoadingPage() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #030d06 0%, #081409 40%, #040e07 100%)",
+      background: "linear-gradient(160deg, #f0f7f3 0%, #e8f5ee 40%, #f4faf7 100%)",
       display: "flex", alignItems: "center", justifyContent: "center",
       fontFamily: theme.fonts.body,
     }}>

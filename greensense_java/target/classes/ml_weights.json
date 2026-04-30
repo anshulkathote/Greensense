@@ -1,0 +1,22 @@
+{
+  "source": "decision_tree_regressor",
+  "model_r2_mean": 0.9466,
+  "weights": {
+    "lightMatch": 2,
+    "maintenanceMatch": 19,
+    "airPurification": 11,
+    "aestheticValue": 5,
+    "petSafety": 4,
+    "climateMatch": 25,
+    "popularity": 34
+  },
+  "survival": {
+    "base": 60,
+    "lightBonus": 8,
+    "maintenanceBonus": 16,
+    "maintenancePartial": 8,
+    "climateBonus": 15,
+    "petBonus": 2,
+    "max": 98
+  }
+}

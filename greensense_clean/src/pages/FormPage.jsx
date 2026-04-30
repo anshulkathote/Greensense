@@ -15,7 +15,7 @@ export function FormPage({ form, setForm, onAnalyze, compatibleCount, totalPlant
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #030d06 0%, #081409 40%, #040e07 100%)",
+      background: "linear-gradient(160deg, #f0f7f3 0%, #e8f5ee 40%, #f4faf7 100%)",
       fontFamily: theme.fonts.body, color: theme.colors.textPrimary,
       position: "relative", overflow: "hidden",
     }}>
@@ -44,8 +44,8 @@ export function FormPage({ form, setForm, onAnalyze, compatibleCount, totalPlant
           display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap",
         }}>
           <span style={{ fontSize: 12, color: theme.colors.primary, fontWeight: 600 }}>🔍 LIVE FILTER</span>
-          <span style={{ fontSize: 13, color: "#74c69d" }}>{compatibleCount} plants compatible with current settings</span>
-          <div style={{ flex: 1, height: 6, background: "#1a2e1a", borderRadius: 3, minWidth: 80 }}>
+          <span style={{ fontSize: 13, color: theme.colors.primaryLight }}>{compatibleCount} plants compatible with current settings</span>
+          <div style={{ flex: 1, height: 6, background: "#ddf0e6", borderRadius: 3, minWidth: 80 }}>
             <div style={{
               height: "100%", width: `${fillPct}%`,
               background: "linear-gradient(90deg, #2d6a4f, #52b788)",
@@ -56,7 +56,7 @@ export function FormPage({ form, setForm, onAnalyze, compatibleCount, totalPlant
 
         {/* Form card */}
         <div style={{
-          background: "linear-gradient(135deg, #0f1d14, #0a120c)",
+          background: "linear-gradient(135deg, #ffffff, #f7fbf9)",
           border: `1px solid ${theme.colors.border}`,
           borderRadius: theme.radius.xl, padding: "32px 28px",
         }}>

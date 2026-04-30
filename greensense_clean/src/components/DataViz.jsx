@@ -14,7 +14,7 @@ export function SurvivalRing({ pct }) {
   return (
     <div style={{ position: "relative", width: 60, height: 60 }}>
       <svg width="60" height="60" viewBox="0 0 60 60" style={{ transform: "rotate(-90deg)" }}>
-        <circle cx="30" cy="30" r={RADIUS} fill="none" stroke="#ffffff15" strokeWidth="4" />
+        <circle cx="30" cy="30" r={RADIUS} fill="none" stroke="#00000012" strokeWidth="4" />
         <circle
           cx="30" cy="30" r={RADIUS} fill="none" stroke={color} strokeWidth="4"
           strokeDasharray={`${(pct / 100) * circ} ${circ}`}
@@ -36,10 +36,10 @@ export function ScoreBar({ label, value, max = 20, color = theme.colors.primary 
   return (
     <div style={{ marginBottom: 6 }}>
       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-        <span style={{ fontSize: 11, color: "#a0a0a0" }}>{label}</span>
+        <span style={{ fontSize: 11, color: theme.colors.textMuted }}>{label}</span>
         <span style={{ fontSize: 11, color: theme.colors.textPrimary, fontWeight: 600 }}>{value}</span>
       </div>
-      <div style={{ height: 4, background: "#ffffff10", borderRadius: 2, overflow: "hidden" }}>
+      <div style={{ height: 4, background: "#d1e8da", borderRadius: 2, overflow: "hidden" }}>
         <div style={{
           height: "100%", width: toPercent(value, max),
           background: color, borderRadius: 2,

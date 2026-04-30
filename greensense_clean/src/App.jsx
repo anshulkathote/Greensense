@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { IntroPage }   from "./pages/IntroPage";
 import { FormPage }    from "./pages/FormPage";
 import { LoadingPage } from "./pages/LoadingPage";
-import { ResultsPage } from "./pages/ResultsPage";
+import { ResultsPage } from "./pages/ResultsPage_full";
+import { NurseryPage } from "./pages/NurseryPage";
 import { recommend, countCompatibleAsync, countCompatible, totalPlants } from "./engine/decisionEngine";
 import { DEFAULT_FORM } from "./data/constants";
 
@@ -43,6 +44,8 @@ export default function App() {
     setScreen("form");
   };
 
+  const handleBackToResults = () => setScreen("results");
+
   switch (screen) {
     case "intro":
       return <IntroPage onStart={handleStart} totalPlants={total} />;
@@ -67,6 +70,14 @@ export default function App() {
           totalPlants={total}
           compatibleCount={compatible}
           onBack={handleBack}
+          onFindNurseries={() => setScreen("nurseries")}
+        />
+      );
+    case "nurseries":
+      return (
+        <NurseryPage
+          results={results}
+          onBack={handleBackToResults}
         />
       );
     default:

@@ -18,7 +18,7 @@ export function IntroPage({ onStart, totalPlants }) {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(160deg, #030d06 0%, #081409 40%, #040e07 100%)",
+      background: "linear-gradient(160deg, #f0f7f3 0%, #e8f5ee 40%, #f4faf7 100%)",
       fontFamily: theme.fonts.body, color: theme.colors.textPrimary,
       position: "relative", overflow: "hidden",
     }}>
@@ -40,7 +40,7 @@ export function IntroPage({ onStart, totalPlants }) {
           GreenSense
         </h1>
 
-        <p style={{ fontSize: 18, color: "#74c69d", marginBottom: 8, letterSpacing: "0.5px" }}>
+        <p style={{ fontSize: 18, color: theme.colors.primaryLight, marginBottom: 8, letterSpacing: "0.5px" }}>
           AI-Based Smart Plant Placement & Recommendation
         </p>
         <p style={{ fontSize: 14, color: theme.colors.textFaint, maxWidth: 480, margin: "0 auto 48px", lineHeight: 1.8 }}>
@@ -54,7 +54,7 @@ export function IntroPage({ onStart, totalPlants }) {
             <div key={label} style={{
               background: theme.colors.bgCard, border: `1px solid ${theme.colors.borderLight}`,
               borderRadius: theme.radius.pill, padding: "8px 16px",
-              fontSize: 12, color: "#74c69d",
+              fontSize: 12, color: theme.colors.primaryLight,
               display: "flex", alignItems: "center", gap: 6,
             }}>
               <span>{icon}</span><span>{label}</span>
